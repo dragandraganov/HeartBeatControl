@@ -1,9 +1,0 @@
-D:\My Documents\Projects\AndroidHeartBeater\AndroidHeartBeater\obj\Debug\assemblies\AndroidHeartBeater.dll
-D:\My Documents\Projects\AndroidHeartBeater\AndroidHeartBeater\obj\Debug\assemblies\Mono.Android.dll
-D:\My Documents\Projects\AndroidHeartBeater\AndroidHeartBeater\obj\Debug\assemblies\mscorlib.dll
-D:\My Documents\Projects\AndroidHeartBeater\AndroidHeartBeater\obj\Debug\assemblies\System.Core.dll
-D:\My Documents\Projects\AndroidHeartBeater\AndroidHeartBeater\obj\Debug\assemblies\System.dll
-D:\My Documents\Projects\AndroidHeartBeater\AndroidHeartBeater\obj\Debug\assemblies\System.Xml.dll
-D:\My Documents\Projects\AndroidHeartBeater\AndroidHeartBeater\obj\Debug\assemblies\System.Xml.Linq.dll
-D:\My Documents\Projects\AndroidHeartBeater\AndroidHeartBeater\obj\Debug\assemblies\System.Runtime.Serialization.dll
-D:\My Documents\Projects\AndroidHeartBeater\AndroidHeartBeater\obj\Debug\assemblies\System.ServiceModel.Internals.dll
