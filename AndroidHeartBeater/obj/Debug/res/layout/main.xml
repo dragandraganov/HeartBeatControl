@@ -1,0 +1,1 @@
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"><md51f4df10f0a2e96f7b65accb673f0fbeb.BounceAnimationControl android:id="@+id/heartBeater" android:layout_height="200dp" android:layout_width="200dp" animationDuration="1000" /></LinearLayout>
