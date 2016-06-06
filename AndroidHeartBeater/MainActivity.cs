@@ -27,26 +27,7 @@ namespace AndroidHeartBeater
             SetContentView(Resource.Layout.Main);
 
             _heartBeater = FindViewById<BounceAnimationControl>(Resource.Id.heartBeater);
-            Task.Delay(2000).ContinueWith(_ =>
-            {
-                _heartBeater.ShapeColor = Color.Green;
-            });
-            Task.Delay(4000).ContinueWith(_ =>
-            {
-                _heartBeater.MaxScale = 1.3f;
-            });
-            Task.Delay(5000).ContinueWith(_ =>
-            {
-                _heartBeater.ShapeColor = Color.Blue;
-            });
-            Task.Delay(10000).ContinueWith(_ =>
-            {
-                _heartBeater.MaxScale = 1.1f;
-            });
-            Task.Delay(3000).ContinueWith(_ =>
-            {
-                _heartBeater.AnimationDuration = 1000;
-            });
+      
         }
     }
 }

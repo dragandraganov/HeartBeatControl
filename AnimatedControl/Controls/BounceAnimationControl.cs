@@ -12,7 +12,7 @@ namespace AnimatedControl.Controls
 {
     public class BounceAnimationControl : UIView
     {
-        const double DefaultDuration = 1;
+        const double DefaultHeartBeatRate = 70;
         const float DefaultMaxScale = 1.2f;
         readonly CGColor _defaultColor = UIColor.Red.CGColor;
 
@@ -58,21 +58,29 @@ namespace AnimatedControl.Controls
             }
         }
 
-        private double _duration;
-
-        public double Duration
+        private double Duration
         {
             get
             {
-                if (_duration == 0)
+                return 60 / HeartBeatRate;
+            }
+        }
+
+        private double _heartBeatRate;
+
+        public double HeartBeatRate
+        {
+            get
+            {
+                if (_heartBeatRate == 0)
                 {
-                    _duration = DefaultDuration;
+                    _heartBeatRate = DefaultHeartBeatRate;
                 }
-                return _duration;
+                return _heartBeatRate;
             }
             set
             {
-                _duration = value;
+                _heartBeatRate = value;
                 RestartAnimation();
             }
         }
@@ -129,7 +137,7 @@ namespace AnimatedControl.Controls
             theAnimation.AutoReverses = true;
             theAnimation.From = NSNumber.FromFloat(1f);
             theAnimation.To = NSNumber.FromFloat(MaxScale);
-            theAnimation.TimingFunction = CAMediaTimingFunction.FromName(CAMediaTimingFunction.EaseInEaseOut);
+            theAnimation.TimingFunction = CAMediaTimingFunction.FromControlPoints(0.5f,1.8f,1,1);
             this.Layer.AddAnimation(theAnimation, "animateOpacity");
         }
 

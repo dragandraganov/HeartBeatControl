@@ -8,6 +8,7 @@ using Android.Views.Animations;
 using Java.Util.Jar;
 using static Android.Views.Animations.Animation;
 using Android.Animation;
+using System.Diagnostics;
 
 namespace AndroidHeartBeater.Controls
 {
@@ -84,7 +85,6 @@ namespace AndroidHeartBeater.Controls
         protected override void OnDraw(Canvas canvas)
         {
             _animation.Duration = AnimationDuration;
-
             using (Path p = new Path(DrawPath))
             {
                 using (Paint paint = new Paint()
@@ -176,10 +176,9 @@ namespace AndroidHeartBeater.Controls
                 AnimationDuration = 1000;
             }
             _animation = new ScaleAnimation(MaxScale, 0.7f, MaxScale, 0.7f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f);
-
-            _animation.StartOffset = 400;
+            _animation.Interpolator = new AnticipateInterpolator();
             _animation.RepeatCount = int.MaxValue;
-
+            _animation.RepeatMode = RepeatMode.Reverse;
             _animation.SetAnimationListener(this);
 
             this.StartAnimation(_animation);
